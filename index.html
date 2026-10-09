@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Metro Electronics · Proforma Invoice</title>
+    <title>Metro Fabrics · Invoice</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link
@@ -84,7 +84,7 @@
 <body class="bg-slate-100">
 
     <header class="bg-blue-900 text-white px-5 py-3 flex items-center justify-between">
-        <h1 class="narrow text-xl font-bold">Metro Electronics — Invoice Maker</h1>
+        <h1 class="narrow text-xl font-bold">Metro Fabrics — Invoice Maker</h1>
         <button id="dl" class="bg-yellow-300 text-black font-semibold px-4 py-2 rounded-md hover:bg-yellow-200">Download
             PDF</button>
     </header>
@@ -174,7 +174,7 @@ Any term not mentioned above will be decided mutually between Buyer and Seller.<
     </main>
 
     <footer class="bg-blue-900 text-white text-center text-sm py-4 mt-4">
-        © <span id="yr"></span> Metro Electronics · Created by <span class="font-semibold text-yellow-300">MD Mehrab
+        © <span id="yr"></span> Metro Fabrics · Created by <span class="font-semibold text-yellow-300">MD Mehrab
             Hossain Chowdhury</span>
     </footer>
     <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
@@ -239,7 +239,7 @@ Any term not mentioned above will be decided mutually between Buyer and Seller.<
                 ? `<img src="${logoData}" style="max-height:70px;max-width:160px">`
                 : `<div style="display:flex;align-items:center;gap:8px">
          <div style="width:58px;height:58px;background:#1e3a8a;color:#fde047;display:flex;align-items:center;justify-content:center;font:800 26px Archivo">ME</div>
-         <div class="narrow" style="font-weight:700;font-size:20px;line-height:1">METRO<br>ELECTRONICS</div>
+         <div class="narrow" style="font-weight:700;font-size:20px;line-height:1">METRO<br>Fabrics</div>
        </div>`;
 
             const rows = items.map(it => `
@@ -261,7 +261,7 @@ Any term not mentioned above will be decided mutually between Buyer and Seller.<
       </div>
     </div>
     <div style="margin-top:14px;line-height:1.5">
-      <div style="font-weight:700">Metro Electronics</div>
+      <div style="font-weight:700">Metro Fabrics</div>
       <div>${v('sAddr')}</div>
       <div>Phone: ${v('sPhone')}${$('sEmail').value ? ' &nbsp;|&nbsp; Email: ' + v('sEmail') : ''}</div>
     </div>
@@ -327,7 +327,7 @@ Any term not mentioned above will be decided mutually between Buyer and Seller.<
             const name = ($('invNo').value || 'invoice').replace(/[^\w-]+/g, '_');
             html2pdf().set({
                 margin: 0,
-                filename: `Metro_Electronics_${name}.pdf`,
+                filename: `Metro_Fabrics_${name}.pdf`,
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 2, useCORS: true },
                 jsPDF: { unit: 'px', format: [794, 1123], orientation: 'portrait', hotfixes: ['px_scaling'] },
